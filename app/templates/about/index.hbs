@@ -5,7 +5,7 @@
 {{outlet}}
 
 {{input id="secretInputField" value=passField}}
-<button {{action 'showSecretAction' passField}}>Check Secret</button>
+<button id="checkSecretBt" {{action 'showSecretAction' passField}}>Check Secret</button>
 
 {{#if showSecret}}
 <p id="secretWrapper"><strong>Nimble Storage</strong></p>

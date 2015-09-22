@@ -49,3 +49,15 @@ test('Check if secret is shown when password is incorrect', function(assert) {
     assert.equal(secretWrapper.length, 1, 'Secret is not shown');
   });
 });
+
+test('Check if 2nd secret is shown on correct password', function(assert) {
+  visit('/about');
+  fillIn('#secretInputField', 'nimble');
+  click('#checkSecretBt');
+
+  andThen(function() {
+    let secret2 = find('#secret2');
+    assert.equal(secret2.length, 1, 'secret is shown');
+    assert.equal(secret2.text(), 'SECRET SHOWN', 'secret2 is incorrect');
+  });
+});
