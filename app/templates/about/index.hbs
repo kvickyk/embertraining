@@ -1,0 +1,15 @@
+<fieldset>
+  <legend>About/Index</legend>
+<h3>This is About/Index</h3>
+
+{{outlet}}
+
+{{input id="secretInputField" value=passField}}
+<button {{action 'showSecretAction' passField}}>Check Secret</button>
+
+{{#if showSecret}}
+<p id="secretWrapper"><strong>Nimble Storage</strong></p>
+{{else}}
+<p id="noSecretWrapper">Secret not shown</p>
+{{/if}}
+</fieldset>

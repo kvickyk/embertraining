@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="container">
+    <h2 id="title">Welcome to Ember</h2>
+    <p>
+      {{link-to 'Home Page' 'index'}}
+      <span>|</span>
+      {{#link-to 'about'}}
+        About Page
+      {{/link-to}}
+    </p>
+
+    {{outlet}}
+  </div>
+</div>
+<div class="footer">
+  <div class="container">
+    <p class="text-muted">Sticky footer content</p>
+  </div>
+</div>

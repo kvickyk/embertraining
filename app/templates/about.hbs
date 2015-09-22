@@ -1,0 +1,15 @@
+<fieldset>
+<legend>About</legend>
+
+<h2>About Page</h2>
+<p>
+  {{link-to 'About Index' 'about.index'}}
+  <span>|</span>
+  {{link-to 'People Page' 'about.people'}}
+</p>
+
+{{#if secretShown}}
+<p><strong>SECRET SHOWN</strong></p>
+{{/if}}
+{{outlet}}
+</fieldset>

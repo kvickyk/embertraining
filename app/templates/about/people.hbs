@@ -1,0 +1,11 @@
+
+<fieldset>
+  <legend>About/People</legend>
+  {{outlet}}
+
+  <ul>
+    {{#each model as |item index|}}
+      <li>Index: {{index}} - {{item.id}}:{{item.name}}</li>
+    {{/each}}
+  </ul>
+</fieldset>
