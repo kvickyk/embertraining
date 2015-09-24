@@ -1,15 +1,18 @@
-<fieldset>
-  <legend>About/Index</legend>
-<h3>This is About/Index</h3>
+<div>
+  <h4>About/Index</h4>
 
-{{outlet}}
+  {{outlet}}
 
-{{input id="secretInputField" value=passField}}
-<button id="checkSecretBt" {{action 'showSecretAction' passField}}>Check Secret</button>
-
-{{#if showSecret}}
-<p id="secretWrapper"><strong>Nimble Storage</strong></p>
-{{else}}
-<p id="noSecretWrapper">Secret not shown</p>
-{{/if}}
-</fieldset>
+  {{input id="secretInputField" value=passField class="form-control"}}<br />
+  <button id="checkSecretBt" class="btn btn-primary" {{action 'showSecretAction' passField}}>Check Secret</button>
+<br />
+<blockquote>
+  {{#if showSecret}}
+    <p id="secretWrapper">
+      <strong>Nimble Storage</strong>
+    </p>
+  {{else}}
+    <p id="noSecretWrapper">Secret not shown</p>
+  {{/if}}
+</blockquote>
+</div>

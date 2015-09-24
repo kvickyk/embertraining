@@ -2,12 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    return [
-      {id:1, name:'Virat'},
-      {id:2, name:'Kadaru'},
-      {id:3, name: 'Gagan'},
-      {id:4, name: 'Liam'}
-    ];
+    // return [
+    //   {id:1, name:'Virat'},
+    //   {id:2, name:'Kadaru'},
+    //   {id:3, name: 'Gagan'},
+    //   {id:4, name: 'Liam'}
+    // ];
+    return this.store.findAll('contact');
   },
   actions: {
     showSecretAction: function(value) {
