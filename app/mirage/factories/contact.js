@@ -6,7 +6,11 @@
 import Mirage, {faker} from 'ember-cli-mirage';
 
 export default Mirage.Factory.extend({
-  name: faker.name.firstName
+  firstName: faker.name.firstName,
+  lastName: faker.name.lastName,
+  age: faker.list.random(18, 20, 28, 32, 45, 60),
+  // age: faker.random.number,
+  zip: faker.address.zipCode
   // name: 'Pete',                         // strings
   // age: 20,                              // numbers
   // tall: true,                           // booleans
