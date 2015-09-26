@@ -1,19 +1,16 @@
 <div class="container">
   <h2 id="title">Welcome to Ember</h2>
-  <div class="container">
+  <div class="panel">
     <p>
       {{link-to 'Home Page' 'index' class="btn btn-default"}}
       <span>|</span>
       {{#link-to 'about' class="btn btn-default"}}
         About Page
       {{/link-to}}
+      <span>|</span>
+      {{link-to 'People Page' 'about.people' class="btn btn-default"}}
     </p>
 
     {{outlet}}
-  </div>
-</div>
-<div class="footer">
-  <div class="container">
-    <p class="text-muted">Sticky footer content</p>
   </div>
 </div>

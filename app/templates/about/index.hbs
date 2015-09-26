@@ -1,18 +1,19 @@
-<div>
-  <h4>About/Index</h4>
-
-  {{outlet}}
-
-  {{input id="secretInputField" value=passField class="form-control"}}<br />
-  <button id="checkSecretBt" class="btn btn-primary" {{action 'showSecretAction' passField}}>Check Secret</button>
-<br />
-<blockquote>
-  {{#if showSecret}}
-    <p id="secretWrapper">
-      <strong>Nimble Storage</strong>
-    </p>
-  {{else}}
-    <p id="noSecretWrapper">Secret not shown</p>
-  {{/if}}
-</blockquote>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h5>Index Outlet</h5>
+  </div>
+  <div class="panel-body">
+    {{input id="secretInputField" value=passField class="form-control"}}<br />
+    <button id="checkSecretBt" class="btn btn-primary" {{action 'showSecretAction' passField}}>Check Secret</button>
+    <br />
+    <blockquote>
+      {{#if showSecret}}
+        <p id="secretWrapper">
+          <strong>Nimble Storage</strong>
+        </p>
+      {{else}}
+        <p id="noSecretWrapper">Secret not shown</p>
+      {{/if}}
+    </blockquote>
+  </div>
 </div>
