@@ -1,6 +1,19 @@
 export default function() {
 
   this.get('/contacts');
+
+  // process results before returning if needed.
+  // this.get('/contacts', function(db, request) {
+  //   let result = db.contacts();
+  //
+  //   return {
+  //     status: "success"
+  //     contacts: results;
+  //   }
+  // });
+
+
+  
   // These comments are here to help you get started. Feel free to delete them.
 
   /*

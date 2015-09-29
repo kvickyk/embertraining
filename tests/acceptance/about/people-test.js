@@ -23,10 +23,15 @@ test('visiting /about/people', function(assert) {
 test('check if records have loaded', function(assert) {
   visit('/about/people');
 
-  server.createList('contact', 10);
+  var contacts = server.createList('contact', 10);
 
   andThen(function() {
     let records = find ('.contact');
     assert.equal(records.length, 10, 'Record count is correct');
+
+    let contactNames = find ('.contactName');
+    for (let i = 0; i < contactNames.length; ++i) {
+      assert.equal(contactNames[i].innerText, contacts[i].firstName + ' ' + contacts[i].lastName, 'first and last name check');
+    }
   });
 });
